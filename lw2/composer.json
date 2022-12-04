@@ -1,0 +1,16 @@
+{
+    "name": "evges/lw2",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Evges\\Lw2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Evgeniya-just",
+            "email": "113514729+Evgeniya-just@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
