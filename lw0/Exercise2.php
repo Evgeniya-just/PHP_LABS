@@ -18,6 +18,7 @@ function sumTime($firstTime, $secondTime)
 }
 
 echo sumTime('10:20:30', '10:20:30');
+
 echo sumTime('10:30:30', '10:30:30');
 echo sumTime('20:30:30', '20:30:30');
 echo sumTime('r0:30:30', '20:z0:30');

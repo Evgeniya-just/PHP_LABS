@@ -2,12 +2,12 @@
 
 class Date
 {
-    private $day;
-    private $month;
-    private $year;
-    public $date;
+    private ?int $day;
+    private ?int $month;
+    private ?int $year;
+    public ?string $date;
 
-    public function __construct($day, $month, $year, $date = 0)
+    public function __construct(?int $day=null, ?int $month=null, ?int $year=null, $date = 0)
     {
         $this->day = $day;
         $this->month = $month;
@@ -15,15 +15,17 @@ class Date
 
         $this->date = "$this->day.$this->month.$this->year";
     }
-    public function diffDate(Date $date)
+
+    public function diffDate(Date $date):int
     {
         $date1 = strtotime($this->date);
         $date2 = strtotime($date->date);
-        $datediff = ABS($date1 - $date2);
-        echo floor($datediff / (60 * 60 * 24));
+        $datediff = ABS($date1 - $date2)/(60 * 60 * 24);
+
+        return $datediff;
     }
 
-    public function format($str)
+    public function format($str):string
     {
 
         if ($str == 'ru') {
@@ -33,17 +35,19 @@ class Date
         }
     }
 
-    public function minusDay($val)
+    public function minusDay($val):string
     {
 
         return date('d.m.Y', strtotime($this->date . " -$val day"));
     }
-    public function getDateOfWeek()
+
+    public function getDateOfWeek():string
     {
 
         return date('l', strtotime($this->date));
     }
 }
+
 
 $date = new Date(1, 2, 2001);
 echo $date->minusDay(4);
