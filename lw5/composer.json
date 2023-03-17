@@ -1,0 +1,19 @@
+{
+    "name": "evges/lw5",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Evges\\Lw5\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Evgeniya-just",
+            "email": "113514729+Evgeniya-just@users.noreply.github.com"
+        }
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "phpstan/phpstan": "^1.10"
+    }
+}
